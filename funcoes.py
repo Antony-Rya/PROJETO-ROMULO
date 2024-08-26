@@ -75,6 +75,7 @@ def criarGrafico(informacoes, opcao):
 
 def acharExtremos(informacoes):
     lista_teste = list(informacoes.items())
+    dias = lista_teste[0][1]
     maximas = lista_teste[1][1]
     minimas = lista_teste[2][1]
     Dia_quente = max(maximas)
@@ -82,4 +83,10 @@ def acharExtremos(informacoes):
     Dias_quentes = []
     Dias_frios = []
     
-    print(maximas.count(30))
+    for i, v in enumerate(maximas):
+        if v == Dia_quente:
+            Dias_quentes.append(dias[i])
+    for i, v in enumerate(minimas):
+        if v == Dia_frio:
+            Dias_frios.append(dias[i])
+    print(Dias_frios)
