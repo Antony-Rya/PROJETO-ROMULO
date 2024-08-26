@@ -36,6 +36,10 @@ def acessarSite(estado, cidade):
 
 
 def criarGrafico(informacoes, opcao):
+  '''
+  Usa de uma bibilioteca e de uma opção passada pelo usuario para criar um arquivo CSV
+  que por sua vez é utilizado para gerar um gráfico com matplotlib.
+  '''
   import pandas as pd
   import matplotlib as mpl
   import matplotlib.pyplot as plt
@@ -48,19 +52,22 @@ def criarGrafico(informacoes, opcao):
   colunasMax = df["Temperatura máxima"]
   ColunasMin = df["Temperatura mínima"]
 
-  fig, ax = plt.subplots(figsize=(8, 5))
+  fig, ax = plt.subplots(figsize=(10, 5))
   # plt.title("GRÁFICO DE TEMPERATURA MÁXIMA E MÍNIMA")
-  plt.title('Bom dia')
+  plt.title('Gráfico de relação: Dias da semana x Temperatura máxima e minima')
   ax.set_xlabel("DIAS DA SEMANA")
-  ax.set_ylabel("TEMPERATURA")
+  ax.set_ylabel("TEMPERATURA (em graus célsius)")
   # ax.bar(barras, colunasMax, color= "red")
   # ax.bar(barras, ColunasMin, color= "blue")
   if opcao == 'linhas':
-      plt.plot(barras, colunasMax, color= "red")
-      plt.plot(barras, ColunasMin, color= "blue")
+      plt.plot(barras, colunasMax, color= "red", label='Temperatura máxima')
+      plt.plot(barras, ColunasMin, color= "blue", label='Temperatura mínima')
       
   elif opcao == 'barras':
-      ax.bar(barras, colunasMax, color= "red")
-      ax.bar(barras, ColunasMin, color= "blue")
-      ax.bar_label(colunasMax, label_type='center')
+      ax.bar(barras, colunasMax, color= "red", label='Temperatura máxima')
+      ax.bar(barras, ColunasMin, color= "blue", label='Temperatura nínima')
+    #   ax.bar_label(colunasMax, label_type='center')
+    
+  plt.legend()
+  plt.grid()  
   plt.savefig('graph.png')
