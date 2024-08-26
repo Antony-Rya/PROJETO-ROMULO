@@ -12,6 +12,7 @@ informacoes = acessarSite(estado, cidade)
 opcao = 'barras'
 criarGrafico(informacoes, opcao)
 
-Dia_quente, Dia_frio = acharExtremos(informacoes)
-
-print(f'Gráfico gerado com as informações da cidade!\nDia possivelmente mais quente: {Dia_quente}\nDia possivelmente mais frio: {Dia_frio}')
+Dias_quentes, Dias_frios = acharExtremos(informacoes)
+Dias_quentes = ", ".join(Dias_quentes)
+Dias_frios = ", ".join(Dias_frios)
+print(f'Gráfico gerado com as informações da cidade!\nDia possivelmente mais quente: {Dias_quentes}\nDia possivelmente mais frio: {Dias_frios}')

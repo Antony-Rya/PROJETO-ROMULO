@@ -89,4 +89,5 @@ def acharExtremos(informacoes):
     for i, v in enumerate(minimas):
         if v == Dia_frio:
             Dias_frios.append(dias[i])
+            
     return Dias_quentes, Dias_frios
