@@ -71,3 +71,15 @@ def criarGrafico(informacoes, opcao):
   plt.legend()
   plt.grid()  
   plt.savefig('graph.png')
+
+
+def acharExtremos(informacoes):
+    lista_teste = list(informacoes.items())
+    maximas = lista_teste[1][1]
+    minimas = lista_teste[2][1]
+    Dia_quente = max(maximas)
+    Dia_frio = min(minimas)
+    Dias_quentes = []
+    Dias_frios = []
+    
+    print(maximas.count(30))
