@@ -92,4 +92,8 @@ def acharExtremos(informacoes, dias, maximas, minimas):
             
     return Dias_quentes, Dias_frios
 
-# def analisarInformacoes(informacoes):
+def analisarInformacoes(maximas, minimas):
+    mediaMax = sum(maximas)/len(maximas)
+    mediaMin = sum(minimas)/len(minimas)
+    mediaGeral = (mediaMax + mediaMin)/2
+    return mediaMax, mediaMin, mediaGeral
