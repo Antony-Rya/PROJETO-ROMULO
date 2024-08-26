@@ -32,7 +32,7 @@ def acessarSite(estado, cidade):
 
 
     dict = {'Dia': Dias, 'Temperatura máxima': TempsMax, 'Temperatura mínima': TempsMin} 
-    return dict
+    return dict, Dias, TempsMax, TempsMin
 
 
 def criarGrafico(informacoes, opcao):
@@ -73,11 +73,11 @@ def criarGrafico(informacoes, opcao):
   plt.savefig('graph.png')
 
 
-def acharExtremos(informacoes):
+def acharExtremos(informacoes, dias, maximas, minimas):
     lista_teste = list(informacoes.items())
-    dias = lista_teste[0][1]
-    maximas = lista_teste[1][1]
-    minimas = lista_teste[2][1]
+    # dias = lista_teste[0][1]
+    # maximas = lista_teste[1][1]
+    # minimas = lista_teste[2][1]
     Dia_quente = max(maximas)
     Dia_frio = min(minimas)
     Dias_quentes = []
@@ -91,3 +91,5 @@ def acharExtremos(informacoes):
             Dias_frios.append(dias[i])
             
     return Dias_quentes, Dias_frios
+
+# def analisarInformacoes(informacoes):

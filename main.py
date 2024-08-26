@@ -6,13 +6,13 @@ from funcoes import *
 estado = 'pb'
 cidade = 'picui'
 
-informacoes = acessarSite(estado, cidade)
+informacoes, Dias, TempMax, TempMin = acessarSite(estado, cidade)
 
 # opcao = input('Que site tipo de grafico deseja criar?(Barras/Linhas): ').lower()
 opcao = 'barras'
 criarGrafico(informacoes, opcao)
 
-Dias_quentes, Dias_frios = acharExtremos(informacoes)
+Dias_quentes, Dias_frios = acharExtremos(informacoes, Dias, TempMax, TempMin)
 Dias_quentes = ", ".join(Dias_quentes)
 Dias_frios = ", ".join(Dias_frios)
 print(f'Gráfico gerado com as informações da cidade!\nDia possivelmente mais quente: {Dias_quentes}\nDia possivelmente mais frio: {Dias_frios}')
