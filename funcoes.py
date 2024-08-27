@@ -1,4 +1,9 @@
 def acessarSite(estado, cidade):
+    '''
+    Utiliza requests e beautifulsoup para acessar o site através da cidade
+    e estado passados como argumento. Retorna três listas com: Dias da semana,
+    temperaturas máximas e mínimas. Também retorna um dicionário com essas informações.
+    '''
     import requests
     from bs4 import BeautifulSoup
 
@@ -37,8 +42,9 @@ def acessarSite(estado, cidade):
 
 def criarGrafico(informacoes, opcao):
   '''
-  Usa de uma bibilioteca e de uma opção passada pelo usuario para criar um arquivo CSV
-  que por sua vez é utilizado para gerar um gráfico com matplotlib.
+  Usa da biblioteca matplotlib, Com informações e uma opção passada pelo usuario 
+  para criar um arquivo CSV (com pandas) que por sua vez é utilizado para gerar um gráfico 
+  com matplotlib, que por sua vez é salvo como uma imagem com o tipo de gráfico da escolha.
   '''
   import pandas as pd
   import matplotlib as mpl
@@ -73,11 +79,11 @@ def criarGrafico(informacoes, opcao):
   plt.savefig('graph.png')
 
 
-def acharExtremos(informacoes, dias, maximas, minimas):
-    lista_teste = list(informacoes.items())
-    # dias = lista_teste[0][1]
-    # maximas = lista_teste[1][1]
-    # minimas = lista_teste[2][1]
+def acharExtremos(dias, maximas, minimas):
+    '''
+    Usa das listas geradas em acessarSite para encontrar os dias mais quentes
+    e mais frios para então coloca-los em listas que por sua vez são retornadas.
+    '''
     Dia_quente = max(maximas)
     Dia_frio = min(minimas)
     Dias_quentes = []
@@ -93,6 +99,9 @@ def acharExtremos(informacoes, dias, maximas, minimas):
     return Dias_quentes, Dias_frios
 
 def analisarInformacoes(maximas, minimas):
+    '''
+    Calcula as médias das temperaturas e as retorna.
+    '''
     mediaMax = sum(maximas)/len(maximas)
     mediaMin = sum(minimas)/len(minimas)
     mediaGeral = (mediaMax + mediaMin)/2

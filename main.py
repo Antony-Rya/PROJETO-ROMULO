@@ -12,7 +12,7 @@ informacoes, Dias, TempMax, TempMin = acessarSite(estado, cidade)
 opcao = 'barras'
 criarGrafico(informacoes, opcao)
 
-Dias_quentes, Dias_frios = acharExtremos(informacoes, Dias, TempMax, TempMin)
+Dias_quentes, Dias_frios = acharExtremos(Dias, TempMax, TempMin)
 Dias_quentes = ", ".join(Dias_quentes)
 Dias_frios = ", ".join(Dias_frios)
 mediaMax, mediaMin, mediaGeral = analisarInformacoes(TempMax, TempMin)
