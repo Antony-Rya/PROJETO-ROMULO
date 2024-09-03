@@ -39,11 +39,10 @@ def acessarSite(estado, cidade):
     dict = {'Dia': Dias, 'Temperatura máxima': TempsMax, 'Temperatura mínima': TempsMin} 
     return dict, Dias, TempsMax, TempsMin
 
-
 def criarGrafico(informacoes, opcao):
   '''
   Usa da biblioteca matplotlib, Com informações e uma opção passada pelo usuario 
-  para criar um arquivo CSV (com pandas) que por sua vez é utilizado para gerar um gráfico 
+  para criar um arquivo CSV (com pandas) é utilizado para gerar um gráfico 
   com matplotlib, que por sua vez é salvo como uma imagem com o tipo de gráfico da escolha.
   '''
   import pandas as pd
@@ -78,11 +77,10 @@ def criarGrafico(informacoes, opcao):
   plt.grid()  
   plt.savefig('graph.png')
 
-
 def acharExtremos(dias, maximas, minimas):
     '''
     Usa das listas geradas em acessarSite para encontrar os dias mais quentes
-    e mais frios para então coloca-los em listas que por sua vez são retornadas.
+    e mais frios para então coloca-los em listas que são retornadas.
     '''
     Dia_quente = max(maximas)
     Dia_frio = min(minimas)

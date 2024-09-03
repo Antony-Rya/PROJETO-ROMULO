@@ -1,15 +1,24 @@
 from funcoes import *
 
-# estado = input('Digite o estado (Sigla): ').lower()
-# cidade = input('Digite a cidade: ').replace(" ", "-").lower()
+# Coleta dos dados via input do usuário
 
-estado = 'pb'
-cidade = 'picui'
+estado = input('Digite o estado (Sigla): ').lower()
+cidade = input('Digite a cidade: ').replace(" ", "-").lower()
 
+# estado = 'pb'
+# cidade = 'picui'
+
+
+# Chamada da função, entregando as informações retiradas do input e atribuindo os resultados
+# a 3 variáveis
 informacoes, Dias, TempMax, TempMin = acessarSite(estado, cidade)
 
-# opcao = input('Que site tipo de grafico deseja criar?(Barras/Linhas): ').lower()
-opcao = 'barras'
+# Coleta de outra informação
+opcao = input('Que site tipo de grafico deseja criar?(Barras/Linhas): ').lower()
+# opcao = 'barras'
+
+# Chamada da segunda função, entregando uma lista resultado da primeira função e o ultimo input.
+
 criarGrafico(informacoes, opcao)
 
 Dias_quentes, Dias_frios = acharExtremos(Dias, TempMax, TempMin)
