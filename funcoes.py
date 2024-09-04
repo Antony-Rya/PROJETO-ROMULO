@@ -1,7 +1,7 @@
 def acessarSite(estado, cidade):
     '''
     Utiliza requests e beautifulsoup para acessar o site através da cidade
-    e estado passados como argumento. Retorna três listas com: Dias da semana,
+    e estado passados como parametro. Retorna três listas com: Dias da semana,
     temperaturas máximas e mínimas. Também retorna um dicionário com essas informações.
     '''
     import requests

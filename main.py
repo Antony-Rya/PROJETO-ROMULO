@@ -31,4 +31,4 @@ Dias_frios = ", ".join(Dias_frios)
 # Chama a ultima função, utilizando as primeiras listas para calcular médias.
 mediaMax, mediaMin, mediaGeral = analisarInformacoes(TempMax, TempMin)
 print(f'Gráfico gerado com as informações da cidade!\nDia possivelmente mais quente: {Dias_quentes}\nDia possivelmente mais frio: {Dias_frios}')
-print(f'A temperatura média é: {mediaGeral:.0f}\nA média maxima é: {mediaMax:.0f}\nE a média minima é: {mediaMin:.0f}')
+print(f'A temperatura média é: {mediaGeral:.0f}°c\nA média maxima é: {mediaMax:.0f}°c\nE a média minima é: {mediaMin:.0f}°c')
