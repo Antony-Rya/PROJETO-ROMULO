@@ -2,7 +2,7 @@ Criado com objetivo de tornar mais fácil a visualização de temperaturas ao lo
 
 Requests: A mais simples entre as quatro, envia alguns dados para um site que por sua vez lê os dados e caso esteja tudo certo, retorna informações que podem então ser utilizadas.
 
-BeautifulSoup: Biblioteca de webscrapping responsável pela maior parte do código, cria um objeto e seu valor é atribuído baseado na informação recebida pelo requests, tratando um código HTML de diversas formas diferentes, no código, usado de forma relativamente simples.
+BeautifulSoup: Biblioteca de webscrapping responsável pelo tema do código, cria um objeto e seu valor é atribuído baseado na informação recebida pelo requests, tratando um código HTML de diversas formas diferentes, no código, usado de forma relativamente simples.
 
 Pandas: Biblioteca com diversos usos, porém, na aplicação, apenas usada para criação de um arquivo CSV (Comma separated values, Valores separados por vírgula)
 
@@ -11,7 +11,7 @@ Matplotlib: Biblioteca gráfica que utiliza os dados processados para criar dife
 PARA QUE SERVE?
 VisaTempo usa de programação para facilitar a vida do usuário que se preocupa com o clima, mais especificamente com a temperatura. Quão comumente viajamos para uma determinada região e somos pêgos de surpresa por uma sensação térmica diferente do que estamos acostumados? Um problema mais frequente do que se pensa, e um ao qual oferecemos a solução.
 
-Com apenas poucas palavras digitadas, o usuario consegue ter acesso a um grafico elaborado de forma simples, que traduz o que programas meteorologicos ou o proprio site podem ter certa dificuldade em passar de forma clara, direta e consisa. 
+Com apenas poucas palavras digitadas, o usuario consegue ter acesso a um grafico elaborado de forma simples, que traduz o que programas meteorologicos ou o proprio site podem ter certa dificuldade em passar de forma clara, direta e concisa. 
 
 
 MODO DE USO:
