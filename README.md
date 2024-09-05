@@ -15,5 +15,5 @@ Com apenas poucas palavras digitadas, o usuario consegue ter acesso a um grafico
 
 
 MODO DE USO:
-Após execução do código, o terminal irá requirir o input de algumas informações, sendo elas o estado e cidade a qual se pretende criar o gráfico a respeito. Com essas informações, a aplicação consegue acessar o dito site (G1) e retirar de seu html as informações que são úteis, processando para que se tornem mais legiveis e finalmente as retornando como listas e um dicionário. O programa então irá perguntar a respeito de que tipo de gráfico o usuário prefere criar, usando essa opção para definir o estilo do gráfico e transformá-lo em uma imagem com as temperaturas.
+Após execução do código, o terminal irá requirir o input de algumas informações, sendo elas o estado e cidade a qual se pretende criar o gráfico a respeito. Com essas informações, a aplicação consegue acessar o dito site (G1) e retirar de seu html as informações que são úteis, processando para que se tornem mais legiveis e finalmente as retornando como listas e um dicionário. O programa então irá perguntar a respeito de que tipo de gráfico o usuário prefere criar, então usando essa opção para definir o estilo do gráfico e transformá-lo em uma imagem com ass temperaturas.
 

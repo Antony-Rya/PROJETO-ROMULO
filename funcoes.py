@@ -42,7 +42,7 @@ def acessarSite(estado, cidade):
 def criarGrafico(informacoes, opcao):
   '''
   Usa da biblioteca matplotlib, Com informações e uma opção passada pelo usuario 
-  para criar um arquivo CSV (com pandas) é utilizado para gerar um gráfico 
+  para criar um arquivo CSV (com pandas), é utilizado para gerar um gráfico 
   com matplotlib, que por sua vez é salvo como uma imagem com o tipo de gráfico da escolha.
   '''
   import pandas as pd
@@ -58,12 +58,9 @@ def criarGrafico(informacoes, opcao):
   ColunasMin = df["Temperatura mínima"]
 
   fig, ax = plt.subplots(figsize=(10, 5))
-  # plt.title("GRÁFICO DE TEMPERATURA MÁXIMA E MÍNIMA")
   plt.title('Gráfico de relação: Dias da semana x Temperatura máxima e minima')
   ax.set_xlabel("DIAS DA SEMANA")
   ax.set_ylabel("TEMPERATURA (em graus célsius)")
-  # ax.bar(barras, colunasMax, color= "red")
-  # ax.bar(barras, ColunasMin, color= "blue")
   if opcao == 'linhas':
       plt.plot(barras, colunasMax, color= "red", label='Temperatura máxima')
       plt.plot(barras, ColunasMin, color= "blue", label='Temperatura mínima')
@@ -71,7 +68,6 @@ def criarGrafico(informacoes, opcao):
   elif opcao == 'barras':
       ax.bar(barras, colunasMax, color= "red", label='Temperatura máxima')
       ax.bar(barras, ColunasMin, color= "blue", label='Temperatura nínima')
-    #   ax.bar_label(colunasMax, label_type='center')
     
   plt.legend()
   plt.grid()  
